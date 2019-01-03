@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "466695131106",
+    "firebase_url": "https://bibisbudgetfirebase.firebaseio.com",
+    "project_id": "bibisbudgetfirebase",
+    "storage_bucket": "bibisbudgetfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466695131106:android:9da0d23e932bcc65",
+        "android_client_info": {
+          "package_name": "losbibis.bibisbudget"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466695131106-dd81eogqhodl2ps1atbe7pq7ft5asn6t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "losbibis.bibisbudget",
+            "certificate_hash": "77e66ab1fb4529c6882c61e10d542bb6c6f0674a"
+          }
+        },
+        {
+          "client_id": "466695131106-9gvpqrqng3s6ljmahr8cf2fcp0u5enn6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "losbibis.bibisbudget",
+            "certificate_hash": "19cf3b02064ad0e6928357dfa5d7a49aa2f2311a"
+          }
+        },
+        {
+          "client_id": "466695131106-9l9s736n315t1rjc2535rp85j92jtfl8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABWcNl1WmdCr0j3EKhsO5DsG8A3Bz0k6E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "466695131106-9l9s736n315t1rjc2535rp85j92jtfl8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

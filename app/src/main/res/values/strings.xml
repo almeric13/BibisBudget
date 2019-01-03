@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">BibisBudget</string>
+    <string name="firebase_web_host" translatable="false">bibisbudgetfirebase.firebaseapp.com</string>
+</resources>

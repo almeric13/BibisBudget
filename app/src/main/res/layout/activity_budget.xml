@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="losbibis.bibisbudget.BudgetActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Restaurant: "
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="32dp"
+        />
+
+    <TextView
+        android:id="@+id/activity_budget_valeur_resto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="72 euros"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        />
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Budget Habits: "
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="32dp"
+        />
+
+    <TextView
+        android:id="@+id/activity_budget_valeur_habits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="150 euros"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:textSize="20dp"
+        />
+
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
