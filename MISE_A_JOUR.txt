@@ -1,0 +1,49 @@
+MISE À JOUR BUDGETBIBIS
+
+1. Fermer le serveur Streamlit en cours avec Ctrl+C.
+2. Sauvegarder data/budget.db.
+3. Extraire cette archive directement dans le dossier du projet budgetbibis.
+4. Accepter le remplacement de app.py, db.py, analytics.py, requirements.txt et README.md.
+5. Ne pas remplacer data/budget.db : cette archive ne contient aucune base.
+6. Relancer : .\.venv\Scripts\python.exe -m streamlit run app.py
+
+Fonctionnalités visibles après mise à jour :
+- Transactions : correction de l’erreur « single positional indexer is out-of-bounds » après catégorisation d’une ligne qui disparaît du filtre actif
+- Filtres : « Uniquement non catégorisées » retient uniquement les transactions sans catégorie calculée ni catégorie forcée
+- Tableau de bord : le compteur « Non catégorisées » applique exactement la même règle
+- Tableau de bord : toutes les lignes du tableau Dépenses sont visibles sans redimensionnement
+- Tableau de bord : anneau des dépenses illustré, 7 catégories principales et classement proportionnel complet
+- Tableau de bord : solde mensuel vert s’il est positif, rouge s’il est négatif et gris s’il est nul
+- Tableau de bord : chaque catégorie est consolidée par son solde net mensuel et n’apparaît que dans Dépenses ou Revenus
+- Transactions : Date effective et Date bancaire originale
+- Modifier une transaction : catégories triées par ordre alphabétique
+- Modifier une transaction : les sous-catégories sont filtrées immédiatement et triées selon la catégorie forcée
+- Modifier une transaction : Utiliser la date bancaire originale / Date effective forcée
+- Amortissements : création et modification avec catégorie et sous-catégorie associées
+- Amortissements : sous-catégories filtrées immédiatement selon la catégorie
+- Amortissements : Progression des mensualités colorée (rouge < 70 %, orange de 70 % à 90 %, vert > 90 %)
+- Amortissements : Avancement financier vert uniquement à exactement 100 %, sans couleur autrement
+- Amortissements : toute modification du solde recalcule l’avancement financier et la progression des mensualités
+- Progression des mensualités = ((mois restant × mensualité ajustée) + solde) / objectif × 100
+- Mensualité ajustée = 0 si l’avancement financier atteint ou dépasse 100 %, sinon mensualité normale
+- Mensualité globale : le total de base reste la somme des mensualités normales
+- Mensualité globale : ce total est réparti proportionnellement selon les mensualités ajustées positives
+- Mensualité globale : chaque transaction utilise l’association de son amortissement
+- Mensualité globale : l’association globale sert au surplus Épargne et de repli
+- La somme des transactions créées égale la somme globale
+- Solde amortissement manuel
+- Mensualités : consultation, création, modification complète sauf ID et suppression confirmée
+- Mensualités : catégories et sous-catégories associées avec filtrage dynamique
+- Suivi : mensualités d’amortissement, surplus persistant et somme mensuelle à transférer vers Trade Republic
+- Suivi : minimum montant Trade Republic = mensualités Trade Republic + soldes des amortissements + solde amortissementManuel
+- Suivi : reste à prélever séparé et détaillé pour toutes les banques et tous les comptes
+- Tableau de bord : reste à prélever affiché à côté du solde mensuel
+- Le reste à prélever n’a aucun impact sur le transfert Trade Republic ni sur le solde mensuel
+- Le reste à prélever est déduit du solde total pour calculer le solde total prévisionnel
+- Emprunts : liste des emprunts en cours et pourcentage d’avancement sans coloration
+- Emprunts : modification du restant à rembourser uniquement
+- Suivi : saisie persistante du solde du mois précédent
+- Tableau de bord : solde du mois précédent affiché à côté du solde du mois
+- Tableau de bord : solde total = solde du mois + solde du mois précédent
+- Tableau de bord : à droite, solde total prévisionnel = solde total - reste à prélever du mois
+- Mensualité globale : préremplissage avec mensualités d’amortissement + surplus enregistré
